@@ -1,0 +1,99 @@
+body {
+    margin:0;
+    padding:0;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px 1fr 150px;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+    grid-gap: 1em;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(0, 86, 139);
+}
+
+header {
+    padding: 16px;
+    grid-area: header;
+    background-color: rgb(60, 151, 255);
+    font-size: 1.5em;
+}
+
+.header-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.header-icon {
+    width:2em;
+    height:2em;
+}
+
+main {
+    grid-area: main;
+}
+
+.form-box {
+    background-color: aliceblue;
+    margin: 3em;
+    padding: 3em;
+    border-radius: 1em;
+}
+
+.formfill {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: black;
+    padding:0.5em;
+}
+ 
+input[type=text] ,input[type=password], input[type=submit]{
+    padding: 1em;
+    margin: 1em;
+  }
+
+  input[type=submit]{
+   cursor: pointer;
+  }
+  
+
+  input[type=submit]:hover {
+    background-color: #599ce9;
+    border: 0;
+  }
+  
+  .patients {
+    color: black;
+    background-color: white; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 0 1 450px; 
+    margin: 2em;
+    padding: 2em;
+    border-radius: 2em;
+    gap: 2em;
+  }
+
+  .boxPatient {
+    border-radius: 1em;
+    background-color: rgb(5, 106, 146);
+    width: 31.5em;
+    height: 31.5em;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.1s;
+  }
+
+  .boxPatient:hover {
+      transform:scale(1.1);
+  }
