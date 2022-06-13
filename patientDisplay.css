@@ -1,0 +1,115 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: lightcoral;
+}
+.bodyTitle {
+    background: rgb(170, 0, 0);
+    color: white;
+    width: 99%;
+    margin: 1em;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 2vh;
+    box-shadow: 5px 5px rgb(255, 199, 199);
+}
+.userTitle {
+    background: rgb(17, 162, 101);
+    color: white;
+    width: 85%;
+    margin: 2 0 0 4em;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 2vh;
+    box-shadow: 5px 5px rgb(0, 86, 50);
+}
+.bodyFooter {
+    background: rgb(170, 0, 0);
+    color: white;
+    width: 95%;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 2vh;
+    box-shadow: 5px 5px rgb(255, 199, 199);
+}
+
+.logOut, .logOut:visited {
+    text-decoration: none !important;
+    color: white;
+    font-size: 2vh;
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: coral;
+    border-radius: 0.2em;
+}
+
+.logOut:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.container {
+    display: block; 
+    background: white;
+    max-width: 100%;
+    width: 100%;
+    padding: 1em;
+    margin: 1em 30px;
+    border-radius: 0.5em;
+    overflow-x: auto;
+}
+
+#btn-get {
+    margin: 1em; 
+    padding: 1em; 
+    outline: none; 
+    border-radius: 5px; 
+    font-size: 3vh;
+    background-color: lightseagreen;
+    color: white;
+    font-weight: 700;
+    border: 0px;
+    cursor: pointer;
+}
+
+#btn-get:hover {
+    background-color: hsl(187, 95%, 30%);
+}
+
+
+#patientForm {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em;
+}
+#patientForm th {
+    background-color: lightcoral;
+    color: white;
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+#patientForm td {
+    background-color: white;
+    color: black;
+    font-size: 1.5em;
+    padding: 0.5em;
+    border-bottom: 2px solid hsla(0, 79%, 72%, 0.52);
+    text-transform: capitalize;
+
+}
+
+#patientForm td:nth-child(even) {
+    background-color: hsla(0, 79%, 72%, 0.52);
+}

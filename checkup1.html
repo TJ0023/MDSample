@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Up Form</title>
+    <link rel="stylesheet" href="checkup1.css">
+</head>
+<body>
+
+    <div class="bodyTitle"><h1>Clinical Care System</h1></div>
+
+    <div class="userTitle"><h1>Please Fill Up The Form</h1></div>
+
+    <div class="container">
+
+        <header>Check Up Form 💊</header>
+
+        <form action="patientFormDisplay.html" onsubmit="">
+            <div class="innerForm">
+                
+                <div class="details">
+
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        
+                        <div class="inputField">
+                            <label for="firstName">First Name <strong> *</strong> </label>
+                            <input type="text" placeholder="" name="firstName" id="firstName" required onkeyup="submitOn()">
+                        </div>
+
+                        <div class="inputField">
+                            <label for="middleName">Middle Name</label>
+                            <input type="text" placeholder="" name="middleName" id="middleName">
+                        </div>
+
+                        <div class="inputField">
+                            <label for="lastName">Last Name <span> *</span> </label>
+                            <input type="text" placeholder="" name="lastName" id="lastName" required onkeyup="submitOn()">
+                        </div>
+
+                    </div>
+                    
+                    <div> 
+                        <div class="inputField2">
+                            <label for="Address">Address <strong> * </strong> </label>
+                            <input type="text" placeholder="" name="Address" class="address" id="address"required onkeyup="submitOn()">
+                        </div>
+                    </div>
+
+                    <div class="fields"> 
+                        <div class="inputField">
+                            <label for="dateOfBirth"> Date of Birth <strong> *</strong> </label>
+                            <input type="date" name="dateOfBirth" value="" min="1910-01-01" max="2022-05-01" id="dateOfBirth" required onclick="submitOn()">
+                        </div>
+
+                        <div class="inputField">
+                            <label for="contactNum">Contact Number <span> *</span></label>
+                            <input type="text" placeholder="e.g. 0123-456-7890" name="contactNum" id="contactNum"required onkeyup="submitOn()">
+                        </div>
+
+                        <div class="inputField inputField3">
+                            <label for="Gender">Gender:<span> *</span> </label>
+                            <label>
+                            <input type="radio" placeholder="" name="genderBtn" id="genderBtn" value=""required onclick="submitOn()" checked> Male 
+                            </label>    
+                            <label>
+                            <input type="radio" placeholder="" name="genderBtn" id="genderBtn2" value="" required onclick="submitOn()"> Female 
+                            </label>    
+                        </div>
+
+                    </div>
+
+                        <div class="inputField4">
+
+                            <label for="medHistory" id="checkboxTitle">Medical History</label>
+                           
+                                <div class="checkBoxField">
+                                 <label for="asthma">
+                                 <input type="checkbox" placeholder="" name="Asthma" id="Asthma" >
+                                    Asthma
+                                 </label>
+                            
+        
+                                <label for="cancer">
+                                <input type="checkbox" placeholder="" name="cancer" id="Cancer" >
+                                    Cancer
+                                </label>
+                                    
+                                <label for="cardiacDisease">
+                                <input type="checkbox" placeholder="" name="cardiacDisease" id="Cardiac-Disease" >
+                                    Cardiac Disease
+                                </label>
+                            
+                                      
+                                <label for="diabetes">
+                                <input type="checkbox" placeholder="" name="diabetes" id="Diabetes" >
+                                    Diabetes
+                                </label>
+                                 </div>
+
+                         
+                                 <div class="checkBoxField">
+                                 <label for="hyperTension">
+                                 <input type="checkbox" placeholder="" name="hyperTension" id="Hypertension" >
+                                    Hypertension
+                                 </label>
+
+                                <label for="psychProblems">
+                                <input type="checkbox" placeholder="" name="psychProblems" id="PsychiatricDisorder" >
+                                    Psychiatric Disorder
+                                </label>
+
+                                 <label for="epilepsy">
+                                <input type="checkbox" placeholder="" name="epilepsy" id="Epilepsy" >
+                                    Epilepsy
+                                </label>
+
+                                <label for="otherDiseases">
+                                <input type="checkbox" placeholder="" name="otherDiseases" id="Others" >
+                                    Others
+                                </label>
+
+                                </div>
+                                
+                              
+                            </div>
+
+                            <div class="inputField5">
+
+                                <label for="currentSymptoms" id="checkboxTitle">Current Symptoms</label>
+                                <select name="symptoms" id="symptoms" multiple>
+                                    <option value="chestPain">Chest Pain</option>
+                                    <option value="respiratory">Respiratory</option>
+                                    <option value="hematological">Hematological</option>
+                                    <option value="lymphatic">Lymphatic</option>
+                                    <option value="neurological">Neurological</option>
+                                    <option value="fever">Fever</option>
+                                    <option value="bodySore">Body Soreness</option>
+                                    <option value="acheMigraine">Headache/Migraine</option>
+                                  </select>
+
+                            </div>
+
+                            <div class="inputField6">
+                                <label for="medicationStatus" id="checkboxTitle">Are you currently taking medication?</label>
+                                <label>
+                                <input type="radio" placeholder="" name="medStatus" value="" id="takingMeds" onclick="medicationText()" required onclick="submitOn()"> Yes 
+                                </label>    
+                                <label>
+                                <input type="radio" placeholder="" name="medStatus" value="" id="noMeds" onclick="medicationText()" required onclick="submitOn()" checked> No 
+                                </label>    
+                                <input type="text" id="yourText" minlength="1" maxlength="50" disabled/>
+                                </div>
+                            </div>
+
+                            <div class="formBtn">
+                                
+                                <input type="button" id="submitBtn" value="SUBMIT" class="submitBtn" disabled>
+                                <input type="reset" value="RESET" class="resetBtn">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="submitModal" class="modal">
+
+                <!-- Modal content with submit button inside -->
+                <div class="modal-content">
+                
+                  <div class="modal-body">
+                    <div>
+                    <p>FORM COMPLETE!</p>
+                    </div>
+                    <img src="images/medicalCare.svg" width="200px">
+                    <input type="submit" value="Proceed" class="loginB2" id="loginButton2" >
+                  </div>
+                
+                </div>
+              
+              </div>
+        </form>
+
+    </div>
+
+    <div class="bodyFooter"><a href="index.html" class="logOut">Log Out</a></div>
+
+
+        <script src="js/checkup.js"></script>
+
+</body>
+</html>

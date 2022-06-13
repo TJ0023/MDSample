@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<!-- /*Modal Popup Test*/ -->
+
+
+    <div class="container">
+
+        <header class="header"><h1>Clinical Care System</h1></header>
+
+        <div class="form1">
+            <img src="images/hospital.png" width="200px">
+
+            <form  action="checkup1.html" id="loginForm">
+
+            <label for="username2"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" id="username2" name="username2" required onkeyup="logInEmpty()" onkeydown="return (event.keyCode!=13);">
+
+            <label for="password2"><b>Password</b></label>
+                 <input type="password" placeholder="Enter Password" id="password2" name="password2" required onkeyup="logInEmpty()" onkeydown="return (event.keyCode!=13);">
+    
+                 <label>
+                    <input type="checkbox" checked name="remember"> Remember me
+                </label>
+
+             <input type="button" value="Log In" class="loginB" id="loginButton" disabled>
+
+             <div id="logInModal" class="modal">
+
+                <!-- Modal content with submit button inside -->
+                <div class="modal-content">
+                
+                  <div class="modal-body">
+                    <div>
+                    <p>Success!</p>
+                    </div>
+                    <img src="images/security.svg" width="200px">
+                    <input type="submit" value="Proceed" class="loginB2" id="loginButton2" >
+                  </div>
+                
+                </div>
+              
+              </div>
+
+         
+
+            </form>
+
+            <a href="#register"><input type="submit" value="CREATE ACCOUNT" class="loginB"></a>
+
+        </div>
+
+        <div class="form2" id="register">\
+
+            <h1>CREATE ACCOUNT</h1>
+            <img src="images/register.png" width="200px">
+            
+            <form action="" id="registerForm" onsubmit="signUp(event);">
+
+            <div class="form-field ">
+            <label for="fname"><b>First Name</b></label>
+                <input type="text" placeholder="Enter First Name" name="fname" id="firstName" class="inputRegister" autocomplete="off" required onkeyup="isEmptyRegister()">
+            <small></small>
+            <small id="success"></small>
+            </div>    
+            
+            
+            <div class="form-field ">
+            <label for="lname"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last Name" name="lname" id="lastName" class="inputRegister"autocomplete="off" required onkeyup="isEmptyRegister()">
+                <small></small>
+                <small id="success"></small>
+
+            </div>
+            
+            <div class="form-field">
+                <label for="username"><b>Username:</b></label>
+                <input type="text" name="username" id="username" class="inputRegister" autocomplete="off" placeholder="Enter Username" required onkeyup="isEmptyRegister()"> 
+                <small></small>
+                <small id="success"></small>
+
+            </div>
+
+            <div class="form-field">
+                <label for="email"><b>Email:</b></label>
+                <input type="text" name="email" id="email" class="inputRegister" autocomplete="off" placeholder="example@example.com" required onkeyup="isEmptyRegister()">
+                <small></small>
+                <small id="success"></small>
+
+            </div>
+
+            <div class="form-field">
+                <label for="password"><b>Password:</b></label>
+                <input type="password" name="password" id="password" class="inputRegister" autocomplete="off" placeholder="Enter Password" required onkeyup="isEmptyRegister()">
+                <small></small>
+                <small id="success"></small>
+            </div>
+
+
+            <div class="form-field">
+                <label for="confirm-password"><b>Confirm Password:</b></label>
+                <input type="password" name="confirm-password"  id="confirm-password" class="inputRegister" autocomplete="off" placeholder="Confirm Password" required onkeyup="isEmptyRegister()">
+                <small></small>
+                <small id="success"></small>
+            </div>
+                
+             <input type="button" value="Register" class="loginB" id="registerButton" disabled>
+             
+             <div id="registerModal" class="modal">
+
+                <!-- Modal content with submit button inside -->
+                <div class="modal-content">
+                
+                  <div class="modal-body">
+                    <div>
+                    <p>Registration Success!</p>
+                    </div>
+                    <img src="images/security.svg" width="200px">
+                    <input type="submit" value="OK" class="loginB2" id="registerButton1">
+                  </div>
+                
+                </div>
+              
+              </div>
+
+            </form>
+    </div>
+
+    <footer class="footer">Copyright 2022 </footer>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
